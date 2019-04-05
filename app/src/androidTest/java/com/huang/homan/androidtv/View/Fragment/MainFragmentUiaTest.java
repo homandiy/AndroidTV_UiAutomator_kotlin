@@ -7,25 +7,18 @@ import android.app.Instrumentation;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.util.Log;
 
-import com.huang.homan.androidtv.Dagger.Application.MyApp;
 import com.huang.homan.androidtv.Data.MyHeaderList;
-import com.huang.homan.androidtv.View.Activity.MainActivity;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-import androidx.annotation.Nullable;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.runner.AndroidJUnit4;
 import androidx.test.uiautomator.By;
@@ -33,7 +26,6 @@ import androidx.test.uiautomator.Direction;
 import androidx.test.uiautomator.UiDevice;
 import androidx.test.uiautomator.UiObject;
 import androidx.test.uiautomator.UiObjectNotFoundException;
-import androidx.test.uiautomator.UiScrollable;
 import androidx.test.uiautomator.UiSelector;
 import androidx.test.uiautomator.Until;
 
@@ -41,9 +33,7 @@ import androidx.test.uiautomator.Until;
 import static androidx.test.core.app.ApplicationProvider.getApplicationContext;
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 import static androidx.test.uiautomator.Direction.DOWN;
-import static androidx.test.uiautomator.Direction.LEFT;
 import static androidx.test.uiautomator.Direction.RIGHT;
-import static androidx.test.uiautomator.Direction.UP;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertThat;
 
@@ -51,7 +41,7 @@ import static org.junit.Assert.assertThat;
 public class MainFragmentUiaTest {
 
     /* Log tag and shortcut */
-    final static String TAG = "MYLOG "+MainFragmentUiaTest.class.getSimpleName();
+    final static String TAG = "MYLOG "+ MainFragmentUiaTestKotlin.class.getSimpleName();
     public static void ltag(String message) { Log.i(TAG, message); }
 
     private static final String PackageName
